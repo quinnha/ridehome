@@ -33,7 +33,7 @@ const Home = () => {
         {sound: "endless", value: sounds.endless}
     ]
 
-    const [value, setValue] = useState(getInitialSoundState)
+    const [value, setValue] = React.useState(getInitialSoundState)
 
     const handleChange = (event) => {
         setValue(event.target.value);
