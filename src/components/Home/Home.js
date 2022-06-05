@@ -15,10 +15,6 @@ const Home = () => {
         return value;
     }
 
-    const options = [
-        {sound: "TTC Line 1", value: sounds.talking},
-        {sound: "TTC Line 2", value: sounds.music}
-    ]
 
     const [value, setValue] = useState(getInitialState)
 
@@ -27,15 +23,6 @@ const Home = () => {
         return value;
     }
 
-    const getInitialMuteState = () => {
-        const value = '1';
-        return value;
-    }
-
-    const muteStates = [
-        {name: 'off', value: '0'},
-        {name: 'on', value: '1'},
-    ]
 
     const options = [
         {sound: "TTC line 1", value: sounds.line1},
@@ -45,7 +32,6 @@ const Home = () => {
         {sound: "endless", value: sounds.endless}
     ]
 
-    const [value, setValue] = React.useState(getInitialSoundState)
 
 
     const handleChange = (event) => {
@@ -86,10 +72,6 @@ const Home = () => {
                     sound={value}
                     id="subwaySound"
                 />
-
-                    <div>
-                        <select value = {value} onChange={handleChange}>
-
                     <div id = "dropdown-div">
                         <select value = {value} onChange={handleChange} id = 'dropdown'>
 
@@ -117,16 +99,15 @@ const Home = () => {
                 </div> */}
                 <div>
                     <MySlider 
-                        title="Music"
-
                         title="music"
-
                         sound={sounds.music}
                         id="musicSound"
                     />
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     )
 }
 
